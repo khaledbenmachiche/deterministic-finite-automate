@@ -66,6 +66,9 @@ func (a automate) peutLireMot(mot string) (bool, error) {
 }
 
 func main() {
+	fmt.Println("==========================================")
+	fmt.Println("Automate d’états finis simple déterministe")
+	fmt.Println("==========================================")
 	automate := automate{}
 	fmt.Println("Entrez les informations de l'automate d’états finis simple déterministe <X, S, S0, F, II> :")
 	var tailleAlphabet int
