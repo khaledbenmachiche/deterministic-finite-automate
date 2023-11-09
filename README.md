@@ -31,10 +31,8 @@ To run this DFA implementation, ensure you have Go installed. If not, you can do
 # Example
 Consider an example DFA that recognizes strings of 0s and 1s where the number of 0s is divisible by 3.
 
-## For example:
-
-"000" is accepted.
-"110" is rejected.
+"000" is accepted.\n
+"110" is rejected.\n
 Modify the transition table and rules in the code to create and test different DFAs based on your requirements.
 
 # License
