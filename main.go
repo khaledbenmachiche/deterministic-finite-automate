@@ -34,7 +34,7 @@ func (a automate) afficher() {
 	fmt.Println("Transition : ")
 	for etat, transitions := range a.transition {
 		for lettre, etatSuivant := range transitions {
-			fmt.Printf("%s %s %s\n", etat, lettre, etatSuivant)
+			fmt.Printf("(%s %s %s)\n", etat, lettre, etatSuivant)
 		}
 	}
 }
@@ -108,6 +108,7 @@ func main() {
 	automate.etats = etats
 
 	transition := make(map[string]map[string]string)
+	fmt.Println("Entrez les transitions (si il y'a aucune transition pour (S0 , w) entrer '-' ) : ")
 	for etat := range etats {
 		transition[etat] = make(map[string]string)
 		fmt.Printf("Transitions à partir de l'état %s :\n", etat)
@@ -115,8 +116,15 @@ func main() {
 			var etatSuivant string
 			fmt.Printf("Entrez l'état suivant pour la lettre %s : ", lettre)
 			_, err := fmt.Scan(&etatSuivant)
+			if etatSuivant != "-" && etats[etatSuivant] == false {
+				fmt.Printf("L'état %s n'existe pas\n", etatSuivant)
+				return
+			}
 			if err != nil {
 				return
+			}
+			if etatSuivant == "-" {
+				continue
 			}
 			transition[etat][lettre] = etatSuivant
 		}
