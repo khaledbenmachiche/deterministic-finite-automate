@@ -27,3 +27,17 @@ To run this DFA implementation, ensure you have Go installed. If not, you can do
 3. execute:
    ```bash
     ./main
+
+# Example
+Consider an example DFA that recognizes strings of 0s and 1s where the number of 0s is divisible by 3.
+
+## For example:
+
+"000" is accepted.
+"110" is rejected.
+Modify the transition table and rules in the code to create and test different DFAs based on your requirements.
+
+# License
+This project is licensed under the MIT License - you're free to use, modify, and distribute the code as per the license terms.
+
+Feel free to contribute, improve, or use this DFA implementation for your projects. Happy coding!
