@@ -19,8 +19,8 @@ To run this DFA implementation, ensure you have Go installed. If not, you can do
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/khaledbenmachiche/deterministic-finite-automate-DFA/
-   cd deterministic-finite-automate-DFA
+   git clone https://github.com/khaledbenmachiche/deterministic-finite-automate/
+   cd deterministic-finite-automate
 2. Compile
    ```bash
    go build main.go
